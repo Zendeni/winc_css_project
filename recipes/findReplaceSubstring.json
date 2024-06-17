@@ -1,0 +1,10 @@
+{
+    "title": "String Operations: Searching and Replacing",
+    "ingredients": [
+        "string manipulation",
+        "includes",
+        "replaceAll"
+    ],
+    "description": "Demonstrates various string operations in JavaScript including searching for substrings, skipping ahead in searches, replacing text, and escaping HTML entities.",
+    "code": "const searchString = 'infinitely';\nconst fullText = 'I know not where I was born, save that the castle was' +\n ' infinitely old and infinitely horrible.';\n\n // Search for substring\nif (fullText.includes(searchString)) {\n  console.log('The search string was found');\n}\n\n// Search, but skip ahead to character position 70\nif (fullText.includes(searchString, 70)) {\n  // Still true, because the search skips the first 'infinitely' and\n  // hits the second one.\n  console.log('The search string was found');\n}\n\n// Replace some text\nconst changedStory = fullText.replaceAll('infinitely', 'somewhat');\nconsole.log(changedStory);\n\n// Use replacements to escape HTML entities\nconst originalPieceOfHtml = '<p>This is a <span>paragraph</span></p>';\nconst safePieceOfHtml = originalPieceOfHtml.replaceAll('<', '&lt;').replaceAll('>', '&gt;');\nconsole.log(`When escaped, ${originalPieceOfHtml} becomes ${safePieceOfHtml}`);"
+}

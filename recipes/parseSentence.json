@@ -1,0 +1,12 @@
+{
+    "title": "Parsing a Sentence for a List of Items",
+    "ingredients": [
+        "string manipulation",
+        "indexOf",
+        "slice",
+        "split",
+        "map",
+        "trim"
+    ],
+    "code": "const sentence = 'This is one sentence. This is a sentence with a list of items:' +\n'cherries, oranges, apples, bananas. That was the list of items.';\nconst start = sentence.indexOf(':');\nconst end = sentence.indexOf('.', start + 1);\n\nconst list = sentence.slice(start + 1, end);\n// list = 'cherries, oranges, apples, bananas'\n\nlet fruits = list.split(',');\n// now fruits has these elements: ['cherries', ' oranges', ' apples', ' bananas']\n\nfruits = fruits.map(s => s.trim());\n// now fruits has these elements: ['cherries', 'oranges', 'apples', 'bananas']\n\nconsole.log(fruits);"
+}

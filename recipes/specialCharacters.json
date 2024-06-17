@@ -1,0 +1,9 @@
+{
+    "title": "String Manipulation with Regular Expressions",
+    "ingredients": [
+        "regular expressions",
+        "string manipulation"
+    ],
+    "description": "Demonstrates how to use regular expressions in JavaScript to find matches and replace patterns in strings.",
+    "code": "// Function used in a template literal example\nfunction getDaysSince(date) {\n  const today = new Date();\n  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds\n  return Math.round(Math.abs((today - date) / oneDay));\n}\n\n// Strings with escape sequences\nconst favoriteMovie = 'My favorite movie is \\'The Seventh Seal\\'.';\nconsole.log(favoriteMovie);\n\nconst copyrightNotice = 'This page \\u00A9 Shelley Powers.';\nconsole.log(copyrightNotice);\n\n// Strings with emojis\nconst hamburger = '🍔';\nconsole.log(`🍔 length: ${hamburger.length}`);\nconst hamburgerStory = `I like hamburgers like ${hamburger} and ${String.fromCodePoint(0x1F354)}`;\nconsole.log(hamburgerStory);\n\n// Template literals\nconst firstName = 'Annie';\nconst lastName = 'Harker';\nconst hireDate = new Date('2020', 5, 22);\nconst employeeDetail = `Our team includes ${firstName} ${lastName}. They've been a team member since ${hireDate}! That's ${getDaysSince(hireDate)} days.`;\nconsole.log(employeeDetail);"
+}

@@ -1,0 +1,9 @@
+{
+    "title": "Case Insensitive String Comparison",
+    "ingredients": [
+        "strings",
+        "case insensitivity",
+        "localeCompare"
+    ],
+    "code": "const a = \"hello\";\nconst b = \"HELLO\";\n\n// Basic case insensitive comparison\nif (a.toLowerCase() === b.toLowerCase()) {\n  console.log(`${a} is the same as ${b} in our comparison`);\n}\n\n// More robust approach using localeCompare\nif (a.localeCompare(b, undefined, { sensitivity: 'accent' }) === 0) {\n  console.log(`${a} is the same as ${b} in our comparison`);\n}"
+}

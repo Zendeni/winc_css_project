@@ -1,0 +1,8 @@
+{
+    "title": "Regular Expression Operations",
+    "ingredients": [
+        "regular expressions"
+    ],
+    "description": "Demonstrates how to use regular expressions in JavaScript to find matches and replace patterns in strings.",
+    "code": "// Use a regular expression to find matches\nconst searchString = \"Now is the time and this is the time and that is the time\";\nconst regexSearch = /t\\w*e/g;\n\nconst matches = searchString.matchAll(regexSearch);\nfor (const match of matches) {\n  console.log(`at ${match.index} we found ${match[0]}`);\n}\n\n// Use a regular expression to replace patterns\nconst originalString = 'Now is the time, this is the tame';\nconst regexReplace = /t\\w{2}e/g;\nconst newString = originalString.replaceAll(regexReplace, 'place');\nconsole.log(`The regex ${regexReplace} changes \"${originalString}\" to \"${newString}\"`);"
+}

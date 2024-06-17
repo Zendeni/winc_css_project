@@ -1,0 +1,10 @@
+{
+    "title": "Search and Highlight Text with Regular Expressions",
+    "ingredients": [
+        "DOM manipulation",
+        "RegExp",
+        "matchAll"
+    ],
+    "description": "Demonstrates how to search and highlight text using regular expressions in JavaScript. Retrieves user input for a search pattern and text to search, then displays the highlighted results on the page.",
+    "code": "document.getElementById(\"searchSubmit\").onclick = function searchSubmit() {\n    // Get the pattern\n    const pattern = document.getElementById('pattern').value;\n    const regex = new RegExp(pattern, 'g');\n\n    // Get the text to search\n    const searchText = document.getElementById('incoming').value;\n\n    let highlightedResult = \"<pre>\";\n    let startPosition = 0;\n    let endPosition = 0;\n\n    // Find each match, and build the result\n    const matches = searchText.matchAll(regex);\n    for (const match of matches) {\n        endPosition = match.index;\n\n        // get all of string up to match, concatenate\n        highlightedResult += searchText.slice(startPosition, endPosition);\n  \n        // add matched, with class\n        highlightedResult += \"<span class='found'>\" + match[0] + \"</span>\";\n        startPosition = endPosition + match[0].length;\n    }\n\n    // Finish off the result string\n    highlightedResult += searchText.slice(startPosition);\n    highlightedResult += \"</pre>\";\n\n    // Show the hightlighted text in the page\n    document.getElementById(\"searchResult\").innerHTML = highlightedResult;\n}"
+}
