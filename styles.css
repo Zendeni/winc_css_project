@@ -1,0 +1,207 @@
+/* Define reusable theme colors and spacing variables for consistent styling. */
+:root {
+    --primary-color: #4f4f4f(214, 3%, 57%);
+    --primary-color-light: white(214, 41%, 85%);
+    --medium-spacing: 1rem;
+    --large-spacing: 2rem;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    transition: background 0.2s linear, color 0.2s linear;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    position: relative;
+    background-color: #4f4f4f;
+    color: white;
+    padding: 1em;
+    height: 150px; /* Adjust height if needed */
+}
+
+.header-content {
+    justify-self: start; /* Align content to the start */
+    margin: 0;
+    font-size: large;
+}
+
+body.dark .search-bar input[type="text"] {
+    background-color: #292c35;
+    color: #fff;
+    
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    width: 100%;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5em;
+}
+
+#search-button {
+    padding: 0.5em 1em;
+    background-color: white;
+    color: #4f4f4f;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #4f4f4f;
+    color: white;
+}
+
+.recipe {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recipe-title {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.recipe-ingredients {
+    margin-bottom: 1em;
+}
+
+.recipe-code {
+    background-color: #f1f1f1;
+    padding: 1em;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.toggle-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 10px;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon, .fa-sun {
+    font-size: 1rem;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 28px; /* Adjust size of toggle ball */
+    height: 28px; /* Adjust size of toggle ball */
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+/* Dark mode adjustments */
+body.dark {
+    background-color: #292c35;
+    color: #fff;
+}
+
+body.dark header {
+    background-color: #353535; /* Dark background for header */
+}
+
+body.dark #recipe-list .recipe {
+    background-color: #353535; /* Dark background color */
+    color: #fff; /* Light text color */
+    border-color: #555; /* Darker border color */
+}
+
+body.dark #recipe-list .recipe-title {
+    color: #fff; /* Adjust title color for dark mode */
+}
+
+body.dark #recipe-list .recipe-ingredients {
+    color: #ccc; /* Adjust ingredients color for dark mode */
+}
+
+body.dark #recipe-list .recipe-code {
+    background-color: #444; /* Dark background color for code */
+    color: #fff; /* Light text color for code */
+}
+
+
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+    header {
+        height: 125px; 
+    }
+
+    .header-content {
+        justify-self: center; /* Center align header content */
+    }
+
+    .toggle-container {
+        position: static; /* Remove absolute positioning on larger screens */
+        margin-left: auto; /* Move toggle */
+    }
+
+    .search-bar {
+        margin-top: 0; /* Remove top margin */
+    }
+
+    #search-input {
+        width: 100%; /* Reset width to auto for flexibility */
+    }
+
+    #search-button {
+        margin-left: 0.5em; /* Add margin between input and button */
+    }
+}
