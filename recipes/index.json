@@ -1,0 +1,10 @@
+[
+    "fizzbuzz.json",
+    "parseSentence.json",
+    "caseInsensitiveComparison.json",
+    "regexOperations.json",
+    "findReplaceSubstring.json",
+    "highlightAllMatches.json",
+    "extractListFromStrings.json",
+    "specialCharacters.json"
+]
