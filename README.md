@@ -8,7 +8,7 @@ This app allows you to explore different recipes, search for specific ones, and 
 
 - **Search Functionality**: Easily search for recipes by typing in keywords in the search bar.
 - **Dark Mode**: Toggle between light and dark modes for different viewing preferences.
-- **Responsive Design**: Designed with a mobile-first approach, ensuring compatibility across various devices.
+- **Responsive Design**: Designed with a mobile-first approach, and media queries, ensuring compatibility across various devices.
 
 ## Technologies Used
 
