@@ -1,7 +1,7 @@
 # JavaScript Cookbook
 
 JavaScript Cookbook made as part of the Winc Academy Bootcamp CSS project. A web application designed to showcase various CSS basics.\
-Main section that loads the recipes use flexbox and the header content follows grid rules.\
+
 This app allows you to explore different recipes, search for specific ones, and toggle between light and dark modes for comfortable reading.
 
 ## Features
