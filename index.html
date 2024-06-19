@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,11 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For font-awesome icons -->
 </head>
+
 <body>
     <header>
         <div class="header-content">
-        <h1 class="nunito">JavaScript Cookbook</h1>
+            <h1 class="nunito">JavaScript Cookbook</h1>
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Search for recipes" oninput="searchRecipes()">
                 <button id="search-button" onclick="searchRecipes()">Search</button>
@@ -23,17 +25,38 @@
         <div class="toggle-container">
             <input type="checkbox" class="checkbox" id="checkbox">
             <label for="checkbox" class="checkbox-label">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-              <span class="ball"></span>
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
             </label>
         </div>
     </header>
     <main>
+        <div class="container-wrapper">
+            <div class="container">
+                <h2>Introduction to JavaScript</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius, orci vel fermentum
+                    fermentum, quam augue pulvinar erat, sit amet vehicula erat sapien sed nunc.</p>
+                <p>Nam gravida nisi at lectus lacinia, a cursus mi iaculis. Fusce vel diam id lorem luctus mollis.
+                    Curabitur consectetur libero vel nisl placerat malesuada.</p>
+            </div>
+            <div class="container">
+                <h2>Getting Started with Projects</h2>
+                <p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus eros aliquet convallis
+                    ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
+                    aliquet convallis ultricies.</p>
+                <p>Phasellus euismod nunc eu vehicula pharetra. Donec bibendum purus id neque tristique, vitae commodo
+                    nibh lobortis. Sed eget elit arcu.</p>
+            </div>
+            </p>
+        </div>
+        </div>
         <section id="recipe-list">
             <!-- Recipes will be dynamically loaded here -->
         </section>
     </main>
     <script src="scripts.js"></script>
 </body>
+
 </html>
