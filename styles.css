@@ -223,17 +223,6 @@ body.dark .container {
     border-color: #555;
 }
 
-@media (min-width: 768px) {
-    .container-wrapper {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-
-    .container {
-        width: 45%;
-    }
-}
 
 /* Media query for tablets and larger screens */
 @media (min-width: 768px) {
